@@ -1,0 +1,31 @@
+{% extends 'partials/base.html.twig' %}
+{% set collection = page.collection() %}
+{% set blog_image = page.media.images[page.header.hero_image] ?: page.media.images|first %}
+
+{% block content %}
+
+    {% block hero %}
+        {% include 'partials/hero.html.twig' with {content: page.content, hero_image: blog_image} %}
+    {% endblock %}
+
+    <div class="container my-5">
+
+        <ul id="travel-overview-gallery-list">
+            {% for child in collection %}
+
+                {% set image = child.media.images|first %}
+                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url({{ image.cropZoom(800,400).url|default('https://via.placeholder.com/800x400')  }}); ">
+                    <a href="{{ child.url }}">
+                        <div class="travel-overview-summary">
+                            <span>14 Photos</span>
+                            <h2>{{ child.title }}</h2>
+                        </div>
+                    </a>
+                </li>
+
+            {% endfor %}
+        </ul>
+        <div class="clear-float"></div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+<div class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+        {% for page in pages.children.visible if not page.home() %}
+            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+            <li class="nav-item"><a href="{{ page.url|e }}" class="nav-link {{ current_page|e }}">{{ page.menu|e }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

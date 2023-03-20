@@ -1,0 +1,9 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <div class="container">
+    {% for module in page.collection() if module.template != 'modular/hero' %}
+        {{ module.content|raw }}
+    {% endfor %}
+    </div>
+{% endblock %}
