@@ -1,5 +1,77 @@
 body {font-family: 'Roboto', sans-serif;}
-p {font-size: 17px; margin-bottom: 1.5rem}
+p {font-size: 17px; margin-bottom: 1.5rem; }
+h2,h3 {margin:50px 0 10px 0;}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
 
 figure.image-caption {margin: 0 0 1rem 0 !important;padding: 0;border: 1px solid #e8e8e8;}
 figure.image-caption figcaption {text-align: left; padding: 5px;}
+
+.navbar.navbar-transparent{
+    background-color:transparent!important;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    color:#fff;
+    padding-top:20px
+}
+
+.navbar ul.navbar-nav li a {
+    text-align:center;
+    padding:11px 23px;
+    min-width:100px;
+    font-weight:100;
+    color: white;
+    background-color:rgba(222,222,222,.3);
+    margin-left:10px;
+    border-radius: 7px;
+}
+
+.navbar ul.navbar-nav li a:hover {
+    background-color:rgba(222,222,222,.6)
+}
+
+.masthead {
+    height: 60vh;
+    min-height: 400px;
+    /*background-image: url('http://localhost:8080/user/pages/02.camper-reizen/14.caminitodelray21/03._dag1/IMG_0672.JPG');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(0%);
+}
+
+.masthead h1{
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /*background-clip: text;*/
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: 0.5rem;
+}
+
+.masthead p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar.navbar-absolute {
+    position: absolute;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 1029;
+}
+
+.navbar.navbar-transparent {
+    background-color: transparent!important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    padding-top: 20px;
+}

@@ -1,8 +1,15 @@
 {% extends 'partials/base.html.twig' %}
+{% set blog_image = page.media.images[page.header.hero_image] ?: page.media.images|first %}
+
+{% block hero %}
+    {% include 'partials/hero.html.twig' with {hero_image: blog_image} %}
+{% endblock %}
+
 
 {% block content %}
 
     <div class="container">
         {{ page.content|raw }}
     </div>
+
 {% endblock %}

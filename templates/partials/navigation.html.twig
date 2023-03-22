@@ -1,8 +1,19 @@
-<div class="d-flex justify-content-center py-3">
-    <ul class="nav nav-pills">
-        {% for page in pages.children.visible if not page.home() %}
-            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-            <li class="nav-item"><a href="{{ page.url|e }}" class="nav-link {{ current_page|e }}">{{ page.menu|e }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
+<!-- Navigation -->
+<nav class="navbar navbar-absolute navbar-transparent navbar-expand-lg navbar-light bg-light ">
+    <div class="container">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarResponsive">
+            <ul class="navbar-nav">
+                {% for page in pages.children.visible %}
+                    {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                    <li class="nav-item {{ current_page|e }}">
+                        <a class="nav-link" href="{{ page.url|e }}">{{ page.menu|e }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -39,14 +39,12 @@
 <body class="">
 
     {% block header %}
-        <header class="mb-auto">
-            <div>
-                {% block navigation %}
-                    {% include 'partials/navigation.html.twig' %}
-                {% endblock %}
-            </div>
-        </header>
+        {% block navigation %}
+            {% include 'partials/navigation.html.twig' %}
+        {% endblock %}
     {% endblock %}
+
+    {% block hero %}{% endblock %}
 
     {% block body %}
         {% block content %}{% endblock %}

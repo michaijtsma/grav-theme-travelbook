@@ -11,13 +11,13 @@
     <div class="container my-5">
 
         <ul id="travel-overview-gallery-list">
-            {% for child in collection %}
+            {% for child in pages.children.visible if not child.home() %}
 
                 {% set image = child.media.images|first %}
                 <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url({{ image.cropZoom(800,400).url|default('https://via.placeholder.com/800x400')  }}); ">
                     <a href="{{ child.url }}">
                         <div class="travel-overview-summary">
-                            <span>{{ count(child.children) }} modules</span>
+                            <span>{{ count(child.children) }} reizen</span>
                             <h2>{{ child.title }}</h2>
                         </div>
                     </a>
@@ -25,7 +25,7 @@
 
             {% endfor %}
         </ul>
-        <div class="clearfix"></div>
+        <div class="clear-float"></div>
     </div>
 
 {% endblock %}
