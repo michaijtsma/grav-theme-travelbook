@@ -99,6 +99,9 @@
 #travel-overview-gallery-list li.one-third {
     width: 24%;
 }
+
+#travel-overview-gallery-list li.one-third h2{margin: 0 0 10px 0;}
+
 @media screen and (max-width: 992px) {
     #travel-overview-gallery-list li.one-third {
         width: 32.33333%;

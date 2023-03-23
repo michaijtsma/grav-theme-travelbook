@@ -1,9 +1,8 @@
 {% extends 'partials/base.html.twig' %}
 {% set collection = page.collection() %}
-{% set blog_image = page.media.images[page.header.hero_image] ?: page.media.images|first %}
-
+{% set header_image = page.media.images[page.header.hero_image] ?: page.media.images|first %}
 {% block hero %}
-    {% include 'partials/hero.html.twig' with {hero_image: blog_image} %}
+    {% include 'partials/hero.html.twig' with {hero_image: header_image} %}
 {% endblock %}
 
 {% block content %}
@@ -17,7 +16,6 @@
                 <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url({{ image.cropZoom(800,400).url|default('https://via.placeholder.com/800x400')  }}); ">
                     <a href="{{ child.url }}">
                         <div class="travel-overview-summary">
-                            <span>{{ count(child.children) }} modules</span>
                             <h2>{{ child.title }}</h2>
                         </div>
                     </a>
@@ -25,7 +23,7 @@
 
             {% endfor %}
         </ul>
-        <div class="clearfix"></div>
+
     </div>
 
 {% endblock %}
