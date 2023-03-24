@@ -1,10 +1,10 @@
-<!-- Full Page Image Header with Vertically Centered Content -->
 <header class="masthead" style="padding-top: 150px; background-image: url('{% if hero_image %}{{ hero_image.url }}{% else %}https://placehold.co/1800x600?text=Placeholder+voor+hero{% endif %}')">
     <div class="container" style="height: 50vh;">
         <div class="row align-items-center">
             <div class="col-12 text-center">
+                {% if not page.home() %}
                 <h1 class="text-uppercase">{{ page.title|raw }}</h1>
-{#                {{ content|raw }}#}
+                {%  endif %}
             </div>
         </div>
     </div>

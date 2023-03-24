@@ -14,29 +14,6 @@ h2,h3 {margin:50px 0 10px 0; font-family: 'Nunito', sans-serif;}
 
 figcaption {text-align: left; padding: 5px 0 0 0; font-size:16px !important;}
 
-.navbar.navbar-transparent{
-    background-color:transparent!important;
-    -webkit-box-shadow:none;
-    box-shadow:none;
-    color:#fff;
-    padding-top:20px
-}
-
-.navbar ul.navbar-nav li a {
-    text-align:center;
-    padding:11px 23px;
-    min-width:100px;
-    font-weight:100;
-    color: white;
-    background-color:rgba(222,222,222,.3);
-    margin-left:10px;
-    border-radius: 7px;
-}
-
-.navbar ul.navbar-nav li a:hover {
-    background-color:rgba(222,222,222,.6)
-}
-
 .masthead {
     height: 60vh;
     min-height: 400px;
@@ -62,6 +39,29 @@ figcaption {text-align: left; padding: 5px 0 0 0; font-size:16px !important;}
     color: rgba(255, 255, 255, 0.5);
 }
 
+.navbar.navbar-transparent{
+    background-color:transparent!important;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    color:#fff;
+    padding-top:20px
+}
+
+.navbar ul.navbar-nav li a {
+    text-align:center;
+    padding:11px 23px;
+    min-width:100px;
+    font-weight:100;
+    color: white;
+    background-color:rgba(222,222,222,.3);
+    margin-left:10px;
+    border-radius: 7px;
+}
+
+.navbar ul.navbar-nav li a:hover {
+    background-color:rgba(222,222,222,.6)
+}
+
 .navbar.navbar-absolute {
     position: absolute;
     width: 100%;
@@ -69,10 +69,14 @@ figcaption {text-align: left; padding: 5px 0 0 0; font-size:16px !important;}
     z-index: 1029;
 }
 
-.navbar.navbar-transparent {
-    background-color: transparent!important;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    color: #fff;
-    padding-top: 20px;
+.navbar .navbar-toggler-icon {
+    border-color: rgb(255,102,203);
+}
+
+/** Vanaf LG **/
+@media(max-width: 992px) {
+    /*ul.navbar-nav li {margin-top:10px;}*/
+    .navbar ul.navbar-nav ul.dropdown-menu{border:1px solid rgba(0,0,0,.15);}
+    .navbar ul.navbar-nav li.nav-item {margin:10px 0 0 0; padding: 0;}
+    .navbar ul.navbar-nav {align-items: center}
 }

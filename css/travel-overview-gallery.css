@@ -73,6 +73,7 @@
     position: absolute;
     z-index: 100;
 }
+
 @media screen and (max-width: 768px) {
     #travel-overview-gallery-list li a .travel-overview-summary {
         bottom: 1em;
@@ -96,20 +97,34 @@
         font-size: 20px;
     }
 }
+
+#travel-overview-gallery-list li  h2{margin: 0 0 10px 0;}
+
+#travel-overview-gallery-list li.one-fifth {
+    width: 19%;
+}
+
 #travel-overview-gallery-list li.one-third {
     width: 24%;
 }
 
-#travel-overview-gallery-list li.one-third h2{margin: 0 0 10px 0;}
 
 @media screen and (max-width: 992px) {
     #travel-overview-gallery-list li.one-third {
+        width: 32.33333%;
+    }
+
+    #travel-overview-gallery-list li.one-fifth {
         width: 32.33333%;
     }
 }
 
 @media screen and (max-width: 768px) {
     #travel-overview-gallery-list li.one-third {
+        width: 49%;
+    }
+
+    #travel-overview-gallery-list li.one-fifth {
         width: 49%;
     }
 }

@@ -1,7 +1,4 @@
-title: Vakantie Home
-extends@:
-  type: default
-  context: blueprints://pages
+title: Vakantie home
 
 form:
   fields:
@@ -10,14 +7,45 @@ form:
       active: 1
 
       fields:
-        advanced:
+
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
           fields:
-            overrides:
-              fields:
-                header.an_example_text_field:
-                  type: text
-                  label: Add a number
-                  default: 5
-                  validate:
-                    required: true
-                    type: int
+            xss_check:
+              type: xss
+
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              label: PLUGIN_ADMIN.TITLE
+
+            content:
+              type: markdown
+              validate:
+                type: textarea
+
+            header.media_order:
+              type: pagemedia
+              label: PLUGIN_ADMIN.PAGE_MEDIA
+
+        options:
+          type: tab
+          title: Options
+
+          fields:
+            header.hero_image:
+              type: filepicker
+              label: Hero Image
+              preview_images: true
+              description: 'If not specified, this defaults to the first image found in the page''s folder'
+
+            name:
+              type: select
+              classes: fancy
+              label: PLUGIN_ADMIN.PAGE_FILE
+              help: PLUGIN_ADMIN.PAGE_FILE_HELP
+              default: default
+              data-options@: '\Grav\Common\Page\Pages::pageTypes'
