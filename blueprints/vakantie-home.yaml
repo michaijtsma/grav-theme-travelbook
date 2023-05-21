@@ -42,6 +42,29 @@ form:
               preview_images: true
               description: 'If not specified, this defaults to the first image found in the page''s folder'
 
+            header.hero_size:
+              type: text
+              label: Hero size
+              description: 'The vertical height in percentages relative to the screens height'
+              validate:
+                type: int
+                min: 1
+                max: 100
+
+            header.hero_title_padding:
+              type: text
+              label: Hero title padding
+              description: 'The vertical padding from the top in percentages relative to the screens height'
+              validate:
+                type: int
+                min: 1
+                max: 100
+
+            header.hero_title_color:
+              type: colorpicker
+              label: Hero title color
+              default: '#FFFFFF'
+
             name:
               type: select
               classes: fancy
